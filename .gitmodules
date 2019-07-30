@@ -1,0 +1,3 @@
+[submodule "external_dependencies/SGpp"]
+	path = external_dependencies/SGpp
+	url = https://github.com/SGpp/SGpp.git

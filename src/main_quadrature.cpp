@@ -1,3 +1,5 @@
+
+#include <sgpp_base.hpp>
 #include <iostream>
 
 #include <example_function.hpp>
