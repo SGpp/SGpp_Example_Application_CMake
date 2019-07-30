@@ -56,4 +56,4 @@ or visit the [SG++ Github page](https://github.com/SGpp/SGpp) for more informati
 
 ## About the utilized example
 The application itself shows how to integrate functions in SG++, using both direct integration of a sparse grid function and the use of Monte Carlo integration.
-It is heavily based on the SG++ example [quadrature.cpp](https://github.com/SGpp/SGpp/blob/master/base/examples/quadrature.cpp) (see also the [full example doc]( http://sgpp.sparsegrids.org/example_quadrature_cpp.html) from the SG++ doxygen dokumentation). However, unlike the quadrature example alone, this repository further shows how to build your own projects utilizing SG++.
+It is heavily based on the SG++ example [quadrature.cpp](https://github.com/SGpp/SGpp/blob/master/base/examples/quadrature.cpp) (see also the [full example doc]( http://sgpp.sparsegrids.org/example_quadrature_cpp.html) from the SG++ doxygen documentation). However, unlike the quadrature example alone, this repository further shows how to build your own projects utilizing SG++.
