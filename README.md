@@ -12,6 +12,8 @@ Feel free to use the code in this repository as you see fit!
 
 ## How to build
 
+To build this application, you need to fullfill all [required dependencies](https://github.com/SGpp/SGpp/wiki/Linux-(GCC-Clang-ICC)#dependencies) of SG++. 
+
 ### 1. Clone repository
 > git clone https://github.com/SGpp/SGpp_Example_Application_CMake.git my_example
 
@@ -39,9 +41,11 @@ Thus, if the SG++ submodule itself is set to another commit, the cmake command n
 > make
 
 This command will build the actual example application. It will not build SG++ again in order to save compilation time.
+After this is done, you can call the application within the build directory with
+>./quadrature
 
 ## How to modify the SG++ build
-The SG++ version used can simply be changed by going to the (checked out) submodule folder external_dependencies/SGpp and changing the commit there as one would in a normal git repository.
+The SG++ version used can simply be changed by going to the (checked out) submodule folder external_dependencies/SGpp and changing the commit there as one would in a normal git repository. Afterwards, the cmake command needs to be run again as described above.
 
 Most likely you want to change the configuration used by SG++, for example by deactivating modules you do not need or by activating a wrapper for another language like Python.
 This can be done in the CMakeLists.txt. In this example, we build all modules of SG++ in order to demonstrate how to include the headers and link the libraries of all SG++ modules with your own application.
@@ -51,9 +55,9 @@ To deactivate one of the modules, edit the scons command, which is called in the
 To see all ways to configure scons for SG++, go to the (checked out) submodule directory and run
 > scons -h
 
-or visit the [SG++ Github page](https://github.com/SGpp/SGpp) for more information.
+or visit the respective [SG++ Wiki page](https://github.com/SGpp/SGpp/wiki/Linux-(GCC-Clang-ICC)#compilation-with-scons) for more information.
 
 
 ## About the utilized example
 The application itself shows how to integrate functions in SG++, using both direct integration of a sparse grid function and the use of Monte Carlo integration.
-It is heavily based on the SG++ example [quadrature.cpp](https://github.com/SGpp/SGpp/blob/master/base/examples/quadrature.cpp) (see also the [full example doc]( http://sgpp.sparsegrids.org/example_quadrature_cpp.html) from the SG++ doxygen documentation). However, unlike the quadrature example alone, this repository further shows how to build your own projects utilizing SG++.
+It is heavily based on the SG++ example [quadrature.cpp](https://github.com/SGpp/SGpp/blob/master/base/examples/quadrature.cpp) (see also the [full example doc]( http://sgpp.sparsegrids.org/example_quadrature_cpp.html) from the [SG++ doxygen documentation](http://sgpp.sparsegrids.org/index.html)). However, unlike the quadrature example alone, this repository further shows how to build your own projects utilizing SG++.
