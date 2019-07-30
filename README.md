@@ -15,34 +15,34 @@ Feel free to use the code in this repository as you see fit!
 To build this application, you need to fullfill all [required dependencies](https://github.com/SGpp/SGpp/wiki/Linux-(GCC-Clang-ICC)#dependencies) of SG++. 
 
 ### 1. Clone repository
-> git clone https://github.com/SGpp/SGpp_Example_Application_CMake.git my_example
+`git clone https://github.com/SGpp/SGpp_Example_Application_CMake.git my_example`
 
-> cd my_example
+`cd my_example`
 ### 2. Checkout SGpp submodule
-> git submodule update --init external_dependencies/SGpp
+`git submodule update --init external_dependencies/SGpp`
 
 The submodule is not checked out during a normal git clone. Thus, we do it this way.
 
 ### 3. Move to build directory
-> mkdir -p build
+`mkdir -p build`
 
-> cd build
+`cd build`
 
 We will use a subfolder within the project root as a build directory. Of course this can be changed to another directory.
 
 ### 4. Run cmake
-> cmake ..
+`cmake ..`
 
 This command will both configure the project as well as build SG++.
 Note that with this setup SG++ will only be built when the cmake command is called.
 Thus, if the SG++ submodule itself is set to another commit, the cmake command needs to be run again.
 
 ### 5. Run make
-> make
+`make`
 
 This command will build the actual example application. It will not build SG++ again in order to save compilation time.
 After this is done, you can call the application within the build directory with
->./quadrature
+`./quadrature`
 
 ## How to modify the SG++ build
 The SG++ version used can simply be changed by going to the (checked out) submodule folder external_dependencies/SGpp and changing the commit there as one would in a normal git repository. Afterwards, the cmake command needs to be run again as described above.
@@ -53,7 +53,7 @@ This can be done in the CMakeLists.txt. In this example, we build all modules of
 To deactivate one of the modules, edit the scons command, which is called in the CMakelists.txt file, to deactivate a module. For example, you need to change SG_DATADRIVEN=0 and remove the line linking to the library libsgppdatadriven.so to deactivate the SG++ datadriven module.
 
 To see all ways to configure scons for SG++, go to the (checked out) submodule directory and run
-> scons -h
+`scons -h`
 
 or visit the respective [SG++ Wiki page](https://github.com/SGpp/SGpp/wiki/Linux-(GCC-Clang-ICC)#compilation-with-scons) for more information.
 
