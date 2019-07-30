@@ -2,7 +2,7 @@
 
 ## Purpose of this repository
 
-This repository is meant as a starting point for people who want to use SG++ in a project of their own. 
+This repository is meant to serve as a starting point for people who want to use [SG++](https://github.com/SGpp/SGpp) in a project of their own. 
 It demonstrates how to use git submodules to include SG++ as an external dependency and how to use cmake
 to both build SG++ and the project itself.
 
@@ -47,7 +47,7 @@ To deactivate a module, edit the scons command, which is called in the CMakelist
 To see all ways to configure scons for SG++, go to the (checked out) submodule directory and run
 > scons -h
 
-or visit [SG++ Github page](https://github.com/SGpp/SGpp) for more information.
+or visit the [SG++ Github page](https://github.com/SGpp/SGpp) for more information.
 
 
 ## About the utilized example
