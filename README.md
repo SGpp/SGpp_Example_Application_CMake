@@ -33,7 +33,7 @@ We will use a subfolder within the project root as a build directory. Of course 
 ### 4. Run cmake
 `cmake ..`
 
-This command will both configure the project as well as build SG++.
+This command will both configure the project as well as build SG++. As this compiles SG++ from scratch, this will take time! The unit tests, however, are switched off to save time.
 Note that with this setup SG++ will only be built when the cmake command is called.
 Thus, if the SG++ submodule itself is set to another commit, the cmake command needs to be run again.
 
