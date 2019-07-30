@@ -73,4 +73,7 @@ include_directories(include)
 # Sources of the current application
 set(SOURCES src/main_quadrature.cpp src/example_function.cpp)
 
+# We need C++11 for our example
+add_compile_options(-std=c++11) 
+
 add_executable(quadrature ${SOURCES})
