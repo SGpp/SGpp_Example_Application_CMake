@@ -1,10 +1,14 @@
 # SGpp_Example_Application_CMake
 
+[![Build Status](https://travis-ci.org/SGpp/SGpp_Example_Application_CMake.svg?branch=master)](https://travis-ci.org/SGpp/SGpp_Example_Application_CMake)
+
 ## Purpose of this repository
 
 This repository is meant to serve as a starting point for people who want to use [SG++](https://github.com/SGpp/SGpp) in a project of their own. 
 It demonstrates how to use git submodules to include SG++ as an external dependency and how to use cmake
 to both build SG++ and the project itself.
+
+Feel free to use the code in this repository as you see fit!
 
 ## How to build
 
@@ -40,9 +44,9 @@ This command will build the actual example application. It will not build SG++ a
 The SG++ version used can simply be changed by going to the (checked out) submodule folder external_dependencies/SGpp and changing the commit there as one would in a normal git repository.
 
 Most likely you want to change the configuration used by SG++, for example by deactivating modules you do not need or by activating a wrapper for another language like Python.
-This can be done in the CMakeLists.txt. In this example, we build all modules of SG++ in order to demonstrate how to include the headers and link libraries with your own application.
+This can be done in the CMakeLists.txt. In this example, we build all modules of SG++ in order to demonstrate how to include the headers and link the libraries of all SG++ modules with your own application.
 
-To deactivate a module, edit the scons command, which is called in the CMakelists.txt file, to deactivate a module. For example, you need to change SG_DATADRIVEN=0 and remove the line linking to the library libsgppdatadriven.so to deactivate the SG++ datadriven module.
+To deactivate one of the modules, edit the scons command, which is called in the CMakelists.txt file, to deactivate a module. For example, you need to change SG_DATADRIVEN=0 and remove the line linking to the library libsgppdatadriven.so to deactivate the SG++ datadriven module.
 
 To see all ways to configure scons for SG++, go to the (checked out) submodule directory and run
 > scons -h
