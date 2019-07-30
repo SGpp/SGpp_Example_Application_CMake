@@ -1,0 +1,26 @@
+branches:
+  only:
+  - master
+
+language: cpp
+
+dist: xenial
+
+addons:
+  apt:
+    update: true
+
+matrix:
+  include:
+  - name: "sgpp-example-application-cmake-build"
+    addons:
+      apt:
+        packages:
+        - scons
+        - cmake
+    script:
+    - git submodule update --init external_dependencies/SGpp
+    - mkdir -p build
+    - cd build
+    - cmake ..
+    - make
