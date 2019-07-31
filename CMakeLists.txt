@@ -21,7 +21,7 @@ if ((NOT SGPP_DIR) OR (NOT EXISTS ${SGPP_DIR}))
 endif()
 
 # Build SGpp (only happens during configure time to save time during the project compilation) 
-# We only build the base module for this example. The other modules can be activated by modifying the scons command below:
+# We build all modules to demonstrate how it is done - to save compile time you might want to deactivate some modules
 execute_process(COMMAND "scons" "SG_BASE=1" "SG_DATADRIVEN=1" "SG_COMBIGRID=1" "SG_OPTIMIZATION=1" # Flags for which SGpp modules to build
 			"SG_QUADRATURE=1" "SG_SOLVER=1" "SG_PDE=1" "SG_MISC=1"                     # Flags for which SGpp modules to build
 			"SG_JAVA=0" "SG_PYTHON=0" "SG_MATLAB=0"                                    # Which language wrappers should be created
@@ -50,7 +50,8 @@ include_directories(${SGPP_SOLVER_INCLUDE_DIR})
 include_directories(${SGPP_PDE_INCLUDE_DIR})
 include_directories(${SGPP_MISC_INCLUDE_DIR})
 
-# Link libraries
+# Link libraries. If you do not compile a SG++ module (see scons call above)
+# out of the following list you have to remove the respective entry
 link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppbase.so)
 link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppdatadriven.so)
 link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppcombigrid.so)

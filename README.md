@@ -33,7 +33,8 @@ We will use a subfolder within the project root as a build directory. Of course 
 ### 4. Run cmake
 `cmake ..`
 
-This command will both configure the project as well as build SG++. As this compiles SG++ from scratch, this will take time! The unit tests, however, are switched off to save time.
+This command will both configure the project as well as build SG++. As this compiles SG++ from scratch, this will take time! The unit tests, however, are switched off to save time. In this example, we build all modules of SG++ in order to demonstrate how to include the headers and link the libraries of all SG++ modules with your own application. Thus, you can reduce the compile time further by deactivating modules (see section below) that you do not need for your own project.
+
 Note that with this setup SG++ will only be built when the cmake command is called.
 Thus, if the SG++ submodule itself is set to another commit, the cmake command needs to be run again.
 
@@ -48,9 +49,7 @@ After this is done, you can call the application within the build directory with
 The SG++ version used can simply be changed by going to the (checked out) submodule folder external_dependencies/SGpp and changing the commit there as one would in a normal git repository. Afterwards, the cmake command needs to be run again as described above.
 
 Most likely you want to change the configuration used by SG++, for example by deactivating modules you do not need or by activating a wrapper for another language like Python.
-This can be done in the CMakeLists.txt. In this example, we build all modules of SG++ in order to demonstrate how to include the headers and link the libraries of all SG++ modules with your own application.
-
-To deactivate one of the modules, edit the scons command, which is called in the CMakelists.txt file, to deactivate a module. For example, you need to change SG_DATADRIVEN=0 and remove the line linking to the library libsgppdatadriven.so to deactivate the SG++ datadriven module.
+To deactivate one of the modules, edit the scons command, which is being called in the CMakelists.txt file, to deactivate the module. For example, you need to change SG_DATADRIVEN=0 and remove the line linking to the library libsgppdatadriven.so to deactivate the SG++ datadriven module.
 
 To see all ways to configure scons for SG++, go to the (checked out) submodule directory and run
 `scons -h`
