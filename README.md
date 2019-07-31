@@ -10,6 +10,8 @@ to both build SG++ and the project itself.
 
 Feel free to use the code in this repository as you see fit!
 
+There is also [another variant](https://github.com/SGpp/SGpp_Example_Application_SCons) of this example application which is using SCons instead of CMake.
+
 ## How to build
 
 To build this application, you need to fullfill all [required dependencies](https://github.com/SGpp/SGpp/wiki/Linux-(GCC-Clang-ICC)#dependencies) of SG++. 
