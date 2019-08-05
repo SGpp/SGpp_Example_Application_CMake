@@ -24,3 +24,4 @@ matrix:
     - cd build
     - cmake ..
     - make
+    - ./quadrature
