@@ -52,14 +52,14 @@ include_directories(${SGPP_MISC_INCLUDE_DIR})
 
 # Link libraries. If you do not compile a SG++ module (see scons call above)
 # out of the following list you have to remove the respective entry
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppbase.so)
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppdatadriven.so)
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppcombigrid.so)
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppoptimization.so)
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppquadrature.so)
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppsolver.so)
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgpppde.so)
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/sgpp/libsgppmisc.so)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/libsgppbase.so)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/libsgppdatadriven.so)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/libsgppcombigrid.so)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/libsgppoptimization.so)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/libsgppquadrature.so)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/libsgppsolver.so)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/libsgpppde.so)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/external_dependencies/SGpp/lib/libsgppmisc.so)
 
 #================================================================================================================================================
 # Setup application
